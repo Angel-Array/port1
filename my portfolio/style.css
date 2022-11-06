@@ -1,0 +1,273 @@
+/*googlefonts*/
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Lobster+Two:ital,wght@1,700&display=swap');
+
+/*variable*/
+:root{
+    --c-brand: #f83691;
+    --c-brand-rgb: 248, 54, 145;
+    --c-dark: #000000;
+    --c-body: #636383;
+    --f-main:  'Lobster Two', sans-serif; 
+    --transition: all .6s cubic-bezier(.165, .84,.44, 1);
+    --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/*reset and healpers*/
+body{
+    font-family: var(--f-main);
+    color: var(--c-body);
+    line-height: 1.7;
+    background-color: #CBC3E3;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+    font-weight: 700;
+    color: var(--c-dark);
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--c-dark);
+    transition: var(--transition);
+}
+
+a:hover{
+    color: var(--c-brand-rgb);
+}
+
+img{
+    width: 100%;
+}
+
+.section-padding{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.text-brand{
+    color: var(--c-brand);
+}
+
+
+.section-title{
+    max-width: 560px;
+    margin: 0 auto 60px auto;
+}
+
+.section-title .line{
+    width: 60px;
+    height: 2px;
+    background-color: var(--c-brand);
+    display: inline-block;
+}
+
+.section-connector{
+    position: relative;
+}
+
+.section-connector::after{
+    content: '';
+    width: 2px;
+    height: 100px;
+    background-color: var(--c-brand);
+    position: absolute;
+    top: -50px;
+    left: 50%;
+}
+
+/*btn*/
+.btn{
+    padding: 10px 24px;
+    border-radius: 0;
+    border-width: 2px;
+    font-weight: 500;
+}
+
+.btn-brand,
+.btn-brand:focus{
+    background-color: var(--c-brand);
+    color: white;
+    border-color: var(--c-brand);
+}
+
+/*navbar*/
+.navbar{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: var(--transition);
+}
+
+.navbar.scrolled{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: white;
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar .nav-link{
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+.navbar .navbar-nav .nav-link{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--c-brand);
+}
+
+.navbar-brand{
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--c-brand);
+}
+.carousel-item{
+    background-size: contain;
+    height: 150vh;
+}
+.projects img{
+    width: 100%;
+    height: 50vh;
+}
+.social-icons{
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    color: var(--c-brand);
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+
+.social-icons:hover{
+    background-color: transparent;
+}
+
+/*image importation for home*/
+#home{
+    background-color:#CBC3E3;
+    background-position: center;
+    background-size: cover;
+}
+
+/*services*/
+.service-icon{
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-link{
+    display: inline-flex;
+    align-items: center;
+}
+
+.custom-link span{
+    font-weight: 700;
+}
+
+.projects{
+    overflow: hidden;
+    position: relative;
+}
+
+.projects .content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--c-brand);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects img,
+.projects .content{
+    transition: var(--transition);
+}
+
+.projects:hover .content{
+    top: 0;
+}
+
+.projects:hover img{
+    transform: translateY(-100%);
+}
+
+/*resume*/
+.eduexp{
+    position: relative;
+}
+
+.eduexp::before{
+    content: '';
+    height: 100%;
+    width: 1px;
+    background-color: rgba(--c-brand-rgb);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.eduexp::after{
+    content: '';
+    height: 14px;
+    width: 14px;
+    background-color: rgba(--c-brand);
+    position: absolute;
+    left: -7px;
+    top: 0;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+.images{
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 70%;
+    width: 70%;
+    bottom: 0;
+    transform: translateX(-50%);
+    object-fit: contain;
+}
+
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
